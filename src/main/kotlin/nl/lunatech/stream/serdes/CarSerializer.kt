@@ -1,4 +1,4 @@
-package nl.lunatech.serdes
+package nl.lunatech.stream.serdes
 
 import com.google.gson.GsonBuilder
 import nl.lunatech.model.Car

@@ -12,3 +12,6 @@ where it can work on the problem and communicate with the customer about what th
 - Telemetry of a Car: When a car is having some issues within their system, the telemetry of it will send a notification to the user (via the car board) where he can analyze it and take action from that.
 - At the same time, that information has to be pushed to a cloud database (?) where it has to be available for all the clients/services belonging to the brand of the car.
 - Database will generate events (pushed to a stream, Kafka or Akka) where can be accessed via APIs. These APIs can be consumed for clients who have access to it (for example a repair shop for the car).
+
+
+

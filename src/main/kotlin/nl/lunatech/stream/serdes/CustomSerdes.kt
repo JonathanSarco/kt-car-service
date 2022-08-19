@@ -1,4 +1,4 @@
-package nl.lunatech.serdes
+package nl.lunatech.stream.serdes
 
 import nl.lunatech.model.Car
 import org.apache.kafka.common.serialization.Serde

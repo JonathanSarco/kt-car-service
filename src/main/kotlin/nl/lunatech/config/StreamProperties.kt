@@ -1,7 +1,7 @@
 package nl.lunatech.config
 
-import nl.lunatech.serdes.CarDeserializer
-import nl.lunatech.serdes.CarSerializer
+import nl.lunatech.stream.serdes.CarDeserializer
+import nl.lunatech.stream.serdes.CarSerializer
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.kafka.common.serialization.StringSerializer
 import org.apache.kafka.streams.StreamsConfig

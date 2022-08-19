@@ -1,9 +1,8 @@
-package nl.lunatech.kafka
+package nl.lunatech.stream
 
 import nl.lunatech.config.StreamProperties
 import nl.lunatech.util.Topic
-import nl.lunatech.kafka.RepairShopConsumer.Companion.initStream
-import nl.lunatech.serdes.CustomSerDes
+import nl.lunatech.stream.RepairShopConsumer.Companion.initStream
 import org.apache.kafka.common.serialization.Serdes
 import org.apache.kafka.streams.KafkaStreams
 import org.apache.kafka.streams.StreamsBuilder
