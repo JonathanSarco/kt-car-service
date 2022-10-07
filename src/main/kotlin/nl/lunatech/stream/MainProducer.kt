@@ -27,12 +27,7 @@ class BrokenCarProducer {
 }
 
 fun main() {
-
     // Read car from DB
-    val event = BrokenCarEvent(
-        UUID.fromString("ad0b7439-9ae2-4cd3-948e-e1bdb2ba65c7"),
-        "Engine is failing",
-        LocalDate.now())
-
+    val event = BrokenCarEvent(UUID.randomUUID(), "Engine is failing", LocalDate.now().toString())
     produceEventBrokenCar(event)
 }

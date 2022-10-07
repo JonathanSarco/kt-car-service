@@ -1,4 +1,4 @@
-package nl.lunatech.model.serializer
+package nl.lunatech.util
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.PrimitiveKind
@@ -7,7 +7,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import java.util.*
 
-class CarSerializer {
+class CustomSerializer {
 
     object UUIDSerializer : KSerializer<UUID> {
         override val descriptor = PrimitiveSerialDescriptor("UUID", PrimitiveKind.STRING)

@@ -13,6 +13,7 @@
     ```
   - The `Event` is pushed into the `Topic 02`
 
+
 - _Topic 02:_ **NEW_CAR_WITH_PROBLEM_ADDED_TOPIC**
   - Receive added `Event`
   - Add to `car_problem` table a new row with these values.

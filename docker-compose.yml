@@ -65,4 +65,6 @@ services:
       - ./db-initialization/init_db.sh:/init_db.sh
       - ./db-initialization/schema.sql:/schema.sql
       - ./db-initialization/db_vehicles.csv:/db_vehicles.csv
+      - ./db-initialization/db_cities.csv:/db_cities.csv
+      - ./db-initialization/db_cities_to_cities.csv:/db_cities_to_cities.csv
     command: bash -c "sleep 10 && chmod u+x /init_db.sh && /init_db.sh"
