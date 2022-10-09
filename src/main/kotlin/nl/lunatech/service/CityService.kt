@@ -4,12 +4,17 @@ import nl.lunatech.model.City
 import nl.lunatech.model.CityDistance
 import nl.lunatech.repository.CityDistanceRepository
 import nl.lunatech.repository.CityRepository
+import javax.enterprise.context.ApplicationScoped
+import javax.inject.Inject
 
+@ApplicationScoped
 class CityService {
 
-    private val cityRepository: CityRepository = CityRepository()
+    @Inject
+    lateinit var cityRepository: CityRepository
 
-    private val cityDistanceRepository: CityDistanceRepository = CityDistanceRepository()
+    @Inject
+    lateinit var cityDistanceRepository: CityDistanceRepository
 
     fun getAllCities(): List<City> {
         return cityRepository.listAll()

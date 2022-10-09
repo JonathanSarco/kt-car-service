@@ -9,27 +9,16 @@ import javax.persistence.Entity
 import javax.persistence.Id
 
 
-class CarProblem(
-    val id: UUID,
-    val description: String,
-    val partBroken: String,
-    val brokenDate: LocalDate
-)
+@Entity
+@Serializable
+class CarProblem {
 
-
-//@Entity
-//@Serializable
-//class CarProblem {
-//
-//    @Id
-//    @Serializable(with = CustomSerializer.UUIDSerializer::class)
-//    lateinit var id: UUID
-//
-//    lateinit var description: String
-//
-//    @Column(name = "part_broken")
-//    lateinit var partBroken: String
-//
-//    @Column(name = "broken_date")
-//    lateinit var brokenDate: String
-//}
+    @Id
+    @Serializable(with = CustomSerializer.UUIDSerializer::class)
+    lateinit var id: UUID
+    lateinit var description: String
+    @Column(name = "part_broken")
+    lateinit var partBroken: String
+    @Column(name = "broken_date")
+    lateinit var brokenDate: String
+}

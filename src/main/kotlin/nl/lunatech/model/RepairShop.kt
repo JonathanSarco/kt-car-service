@@ -7,8 +7,8 @@ import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
 
-//@Entity
-//@Serializable
+@Entity
+@Serializable
 class RepairShop {
 
     @Id

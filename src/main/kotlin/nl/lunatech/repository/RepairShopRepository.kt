@@ -1,11 +1,14 @@
 package nl.lunatech.repository
 
+import io.quarkus.hibernate.orm.panache.kotlin.PanacheRepository
 import nl.lunatech.model.Car
 import nl.lunatech.model.RepairShop
 import java.util.*
+import javax.enterprise.context.ApplicationScoped
 import kotlin.collections.HashMap
 
-class RepairShopRepository {
+@ApplicationScoped
+class RepairShopRepository: PanacheRepository<RepairShop> {
 
 //  val id: UUID,
 //    val name: String,

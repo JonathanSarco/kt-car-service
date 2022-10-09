@@ -3,8 +3,10 @@ package nl.lunatech.service
 import nl.lunatech.model.Car
 import nl.lunatech.repository.CarRepository
 import java.util.UUID
+import javax.enterprise.context.ApplicationScoped
 import javax.inject.Inject
 
+@ApplicationScoped
 class CarService {
 
     @Inject
@@ -14,7 +16,4 @@ class CarService {
         val response = carRepository.find("uuid", id)
         return response.firstResult()
     }
-
-
-
 }

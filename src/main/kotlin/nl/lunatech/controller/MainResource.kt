@@ -13,10 +13,16 @@ import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 
 @Path("/")
-class MainResource {
+class MainResource(
+    val carService: CarService,
+    val cityService: CityService
+) {
 
-    val carService: CarService = CarService()
-    val cityService: CityService = CityService()
+
+    // Check CircuitBreaker
+
+//    val carService: CarService = CarService()
+//    val cityService: CityService = CityService()
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

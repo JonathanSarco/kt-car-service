@@ -9,15 +9,24 @@ import org.apache.kafka.common.serialization.Serdes
 import org.apache.kafka.streams.KafkaStreams
 import org.apache.kafka.streams.StreamsBuilder
 import org.apache.kafka.streams.kstream.Consumed
-import org.apache.kafka.streams.kstream.Produced
 
 class RepairShopConsumer {
 
+//        @Id
+//    @Serializable(with = CustomSerializer.UUIDSerializer::class)
+//    lateinit var id: UUID
+//    lateinit var description: String
+//    @Column(name = "part_broken")
+//    lateinit var partBroken: String
+//    @Column(name = "broken_date")
+//    lateinit var brokenDate: String
+
     companion object {
+        private fun readBrokenCarEvent(value: BrokenCarEvent) {
+            println("[Event]: ReadBrokenCar - $value")
 
 
-        private fun readEvent(value: BrokenCarEvent) {
-            println("Observed event.... $value")
+
         }
 
 
@@ -29,7 +38,7 @@ class RepairShopConsumer {
 
             builder
                 .stream(Topic.BROKEN_CAR_TOPIC.topic, Consumed.with(stringSerde, brokenCarSerDes))
-                .peek { _, value -> readEvent(value) }
+                .peek { _, value -> readBrokenCarEvent(value) }
 
             val topology = builder.build()
             val kafkaStreams = KafkaStreams(topology, StreamProperties.getDeserializerProperties())
