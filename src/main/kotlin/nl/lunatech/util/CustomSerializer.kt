@@ -10,7 +10,10 @@ import java.util.*
 class CustomSerializer {
 
     object UUIDSerializer : KSerializer<UUID> {
-        override val descriptor = PrimitiveSerialDescriptor("UUID", PrimitiveKind.STRING)
+
+        const val uuid = "UUID"
+
+        override val descriptor = PrimitiveSerialDescriptor(uuid, PrimitiveKind.STRING)
 
         override fun deserialize(decoder: Decoder): UUID {
             return UUID.fromString(decoder.decodeString())

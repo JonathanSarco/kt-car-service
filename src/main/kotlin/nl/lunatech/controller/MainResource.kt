@@ -19,8 +19,6 @@ class MainResource(
 ) {
 
 
-    // Check CircuitBreaker
-
 //    val carService: CarService = CarService()
 //    val cityService: CityService = CityService()
 
